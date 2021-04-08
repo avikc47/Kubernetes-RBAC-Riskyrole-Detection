@@ -1,4 +1,5 @@
-# kubernetes-rbac-riskyrole-detection
+# Automated detection of Risky Permissions in Kubernetes Clusters
+ 
 
 ExtensiveRoleCheck.py is a Python tool that scans the Kubernetes RBAC for risky roles.
 
