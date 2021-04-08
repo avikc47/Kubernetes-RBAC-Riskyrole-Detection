@@ -11,19 +11,25 @@ Roles
 ClusterRoles
 RoleBindings
 ClusterRoleBindings
-To export those files you will need access permissions in the Kubernetes cluster. To export them, you might use the following commands: Export RBAC Roles:
+To export those files you will need access permissions in the Kubernetes cluster. To export them, you might use the following commands: 
+
+Export RBAC Roles:
 
 kubectl get roles --all-namespaces -o json > Roles.json
+
 Export RBAC ClusterRoles:
 
 kubectl get clusterroles -o json > clusterroles.json
+
 Export RBAC RolesBindings:
 
 kubectl get rolebindings --all-namespaces -o json > rolebindings.json
+
 Export RBAC Cluster RolesBindings:
 
 kubectl get clusterrolebindings -o json > clusterrolebindings.json
-example & output:
+
+
 Usage
 
 python ExtensiveRoleCheck.py --clusterRole clusterroles.json  --role Roles.json --rolebindings rolebindings.json --cluseterolebindings clusterrolebindings.json
